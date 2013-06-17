@@ -2,34 +2,61 @@
 
 ## Introduction
 
-This project automates the setup of a development environment for working on Ruby on Rails itself. Use this virtual machine to work on a pull request with everything ready to hack and run the test suites.
+Ce repository contient la VM de developpement que je vous recommande
+fortement d'utiliser pendant la Semaine Immersive Ruby (SImRuby). Il
+contient aussi des liens vers les specs des exercices de la semaine,
+vers les slides des cours, ainsi que de la documentation pour vous
+assister.
 
-Please note this virtual machine is not designed to be used for Rails application development.
+Note: Thank to the rails team for providing the original vagrant box.
 
-## Requirements
+## Dependances
 
 * [VirtualBox](https://www.virtualbox.org)
 
 * [Vagrant](http://vagrantup.com)
 
-## How To Build The Virtual Machine
+* Un cerveau repose et en etat de marche
+
+* Pas mal de motivation
+
+## Comment deployer la VM et s'y connecter
 
 Building the virtual machine is this easy:
 
-    host $ git clone https://github.com/rails/rails-dev-box.git
-    host $ cd rails-dev-box
+    host $ git clone https://github.com/elthariel/simruby.git
+    host $ cd simruby
+    host $ git submodule init
     host $ vagrant up
 
 That's it.
 
-If the base box is not present that command fetches it first. The setup itself takes about 3 minutes in my MacBook Air. After the installation has finished, you can access the virtual machine with
+Si la box de base n'est pas present, la commande va aller la
+telecharger dans un premier temps, le setup prends quelques minutes
+sur mon laptop, il peut etre plus long en fonctions de votre
+connection et de votre machine.
+
+Une fois cela fait, vous pouvez acceder a votre machine virtuelle de cette facon "
 
     host $ vagrant ssh
     Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
     ...
-    vagrant@rails-dev-box:~$
+    vagrant@simruby-devbox:~$
 
-Port 3000 in the host computer is forwarded to port 3000 in the virtual machine. Thus, applications running in the virtual machine can be accessed via localhost:3000 in the host computer.
+Vous etes maintenant en train d'executer un shell dans la machine
+virtuelle. Vagrant est vraiment tres cool, il partage par defaut le
+repertoire simruby ainsi que tous les sous-repertoires avec la VM,
+vous pouvez y acceder en vous rendant dans le repertoire /vagrant
+
+    vagrant@simruby-devbox:~$ cd /vagrant
+    vagrant@simruby-devbox:/vagrant$ ls
+    day1  day2  day3  day4  day5  puppet  README.md  slides  Vagrantfile
+
+Le port 3000 (le port par defaut de rails) de l'hote est forwarde
+(transfere) au port 3000 de la machine virtuelle. De cette maniere,
+les applis rails de la machine virtuelles sont disponibles a cette
+adresse sur l'hote: http://localhost:3000
+
 
 ## What's In The Box
 
@@ -58,19 +85,6 @@ The recommended workflow is
 * edit in the host computer and
 
 * test within the virtual machine.
-
-Just clone your Rails fork in the very directory of the Rails development box in the host computer:
-
-    host $ ls
-    README.md   Vagrantfile puppet
-    host $ git clone git@github.com:<your username>/rails.git
-
-Vagrant mounts that very directory as _/vagrant_ within the virtual machine:
-
-    vagrant@rails-dev-box:~$ ls /vagrant
-    puppet  rails  README.md  Vagrantfile
-
-so we are ready to go to edit in the host, and test in the virtual machine.
 
 This workflow is convenient because in the host computer you normally have your editor of choice fine-tuned, Git configured, and SSH keys in place.
 
