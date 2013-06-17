@@ -57,6 +57,22 @@ Le port 3000 (le port par defaut de rails) de l'hote est forwarde
 les applis rails de la machine virtuelles sont disponibles a cette
 adresse sur l'hote: http://localhost:3000
 
+## Mettre a jour le dossier
+
+A cause de la facon dont sont organises les contenus (plusieurs petits
+repos au lieu d'un gros) la mise a jour des contenus necessites 2
+commandes au lieu d'une seule :
+
+    host $ git pull orign master
+    host $ git submodule update --recursive
+
+## Tester mon travail
+
+### Jour 1
+
+    vagrant@simruby-devbox:~$ cd /vagrant/day1
+    vagrant@simruby-devbox:/vagrant/day1$ rspec
+    [...]
 
 ## What's In The Box
 
