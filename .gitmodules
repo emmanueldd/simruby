@@ -1,9 +1,9 @@
+[submodule "slides"]
+	path = slides
+	url = git@github.com:elthariel/simruby-slides.git
 [submodule "ruby"]
 	path = ruby
 	url = git@github.com:elthariel/simruby-ruby.git
 [submodule "rails"]
 	path = rails
 	url = git@github.com:elthariel/simruby-rails.git
-[submodule "slides"]
-	path = slides
-	url = git@github.com:elthariel/simruby-slides.git
