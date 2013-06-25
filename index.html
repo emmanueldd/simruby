@@ -1,0 +1,191 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>SimRuby by elthariel</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="javascripts/respond.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+      <div id="header">
+        <nav>
+          <li class="fork"><a href="https://github.com/elthariel/simruby">View On GitHub</a></li>
+          <li class="downloads"><a href="https://github.com/elthariel/simruby/zipball/master">ZIP</a></li>
+          <li class="downloads"><a href="https://github.com/elthariel/simruby/tarball/master">TAR</a></li>
+          <li class="title">DOWNLOADS</li>
+        </nav>
+      </div><!-- end header -->
+
+    <div class="wrapper">
+
+      <section>
+        <div id="title">
+          <h1>SimRuby</h1>
+          <p>Semaine Immersive Ruby @ Sup'Internet</p>
+          <hr>
+          <span class="credits left">Project maintained by <a href="https://github.com/elthariel">elthariel</a></span>
+          <span class="credits right">Hosted on GitHub Pages &mdash; Theme by <a href="https://twitter.com/michigangraham">mattgraham</a></span>
+        </div>
+
+        <h1>
+<a name="a-virtual-machine-for-simruby-students" class="anchor" href="#a-virtual-machine-for-simruby-students"><span class="octicon octicon-link"></span></a>A Virtual Machine for SImRuby students</h1>
+
+<h2>
+<a name="introduction" class="anchor" href="#introduction"><span class="octicon octicon-link"></span></a>Introduction</h2>
+
+<p>Ce repository contient la VM de developpement que je vous recommande
+fortement d'utiliser pendant la Semaine Immersive Ruby (SImRuby). Il
+contient aussi des liens vers les specs des exercices de la semaine,
+vers les slides des cours, ainsi que de la documentation pour vous
+assister.</p>
+
+<p>Note: Thank to the rails team for providing the original vagrant box.</p>
+
+<h2>
+<a name="dependances" class="anchor" href="#dependances"><span class="octicon octicon-link"></span></a>Dependances</h2>
+
+<ul>
+<li><p><a href="https://www.virtualbox.org">VirtualBox</a></p></li>
+<li><p><a href="http://vagrantup.com">Vagrant</a></p></li>
+<li><p>Un cerveau repose et en etat de marche</p></li>
+<li><p>Pas mal de motivation</p></li>
+</ul><h2>
+<a name="comment-deployer-la-vm-et-sy-connecter" class="anchor" href="#comment-deployer-la-vm-et-sy-connecter"><span class="octicon octicon-link"></span></a>Comment deployer la VM et s'y connecter</h2>
+
+<p>Building the virtual machine is this easy:</p>
+
+<pre><code>host $ git clone https://github.com/elthariel/simruby.git
+host $ cd simruby
+host $ git submodule init
+host $ vagrant up
+</code></pre>
+
+<p>That's it.</p>
+
+<p>Si la box de base n'est pas present, la commande va aller la
+telecharger dans un premier temps, le setup prends quelques minutes
+sur mon laptop, il peut etre plus long en fonctions de votre
+connection et de votre machine.</p>
+
+<p>Une fois cela fait, vous pouvez acceder a votre machine virtuelle de cette facon "</p>
+
+<pre><code>host $ vagrant ssh
+Welcome to Ubuntu 12.04 LTS (GNU/Linux 3.2.0-23-generic-pae i686)
+...
+vagrant@simruby-devbox:~$
+</code></pre>
+
+<p>Vous etes maintenant en train d'executer un shell dans la machine
+virtuelle. Vagrant est vraiment tres cool, il partage par defaut le
+repertoire simruby ainsi que tous les sous-repertoires avec la VM,
+vous pouvez y acceder en vous rendant dans le repertoire /vagrant</p>
+
+<pre><code>vagrant@simruby-devbox:~$ cd /vagrant
+vagrant@simruby-devbox:/vagrant$ ls
+day1  day2  day3  day4  day5  puppet  README.md  slides  Vagrantfile
+</code></pre>
+
+<p>Le port 3000 (le port par defaut de rails) de l'hote est forwarde
+(transfere) au port 3000 de la machine virtuelle. De cette maniere,
+les applis rails de la machine virtuelles sont disponibles a cette
+adresse sur l'hote: http://localhost:3000</p>
+
+<h2>
+<a name="mettre-a-jour-le-dossier" class="anchor" href="#mettre-a-jour-le-dossier"><span class="octicon octicon-link"></span></a>Mettre a jour le dossier</h2>
+
+<p>A cause de la facon dont sont organises les contenus (plusieurs petits
+repos au lieu d'un gros) la mise a jour des contenus necessites 2
+commandes au lieu d'une seule :</p>
+
+<pre><code>host $ git pull orign master
+host $ git submodule update --recursive
+</code></pre>
+
+<h2>
+<a name="tester-mon-travail" class="anchor" href="#tester-mon-travail"><span class="octicon octicon-link"></span></a>Tester mon travail</h2>
+
+<h3>
+<a name="jour-1" class="anchor" href="#jour-1"><span class="octicon octicon-link"></span></a>Jour 1</h3>
+
+<pre><code>vagrant@simruby-devbox:~$ cd /vagrant/day1
+vagrant@simruby-devbox:/vagrant/day1$ rspec
+[...]
+</code></pre>
+
+<h2>
+<a name="whats-in-the-box" class="anchor" href="#whats-in-the-box"><span class="octicon octicon-link"></span></a>What's In The Box</h2>
+
+<ul>
+<li><p>Git</p></li>
+<li><p>RVM</p></li>
+<li><p>Ruby 2.0.0 (binary RVM install)</p></li>
+<li><p>Bundler</p></li>
+<li><p>SQLite3, MySQL, and Postgres</p></li>
+<li><p>System dependencies for nokogiri, sqlite3, mysql, mysql2, and pg</p></li>
+<li><p>Databases and users needed to run the Active Record test suite</p></li>
+<li><p>Node.js for the asset pipeline</p></li>
+<li><p>Memcached</p></li>
+</ul><h2>
+<a name="recommended-workflow" class="anchor" href="#recommended-workflow"><span class="octicon octicon-link"></span></a>Recommended Workflow</h2>
+
+<p>The recommended workflow is</p>
+
+<ul>
+<li><p>edit in the host computer and</p></li>
+<li><p>test within the virtual machine.</p></li>
+</ul><p>This workflow is convenient because in the host computer you normally have your editor of choice fine-tuned, Git configured, and SSH keys in place.</p>
+
+<h2>
+<a name="virtual-machine-management" class="anchor" href="#virtual-machine-management"><span class="octicon octicon-link"></span></a>Virtual Machine Management</h2>
+
+<p>When done just log out with <code>^D</code> and suspend the virtual machine</p>
+
+<pre><code>host $ vagrant suspend
+</code></pre>
+
+<p>then, resume to hack again</p>
+
+<pre><code>host $ vagrant resume
+</code></pre>
+
+<p>Run</p>
+
+<pre><code>host $ vagrant halt
+</code></pre>
+
+<p>to shutdown the virtual machine, and</p>
+
+<pre><code>host $ vagrant up
+</code></pre>
+
+<p>to boot it again.</p>
+
+<p>You can find out the state of a virtual machine anytime by invoking</p>
+
+<pre><code>host $ vagrant status
+</code></pre>
+
+<p>Finally, to completely wipe the virtual machine from the disk <strong>destroying all its contents</strong>:</p>
+
+<pre><code>host $ vagrant destroy # DANGER: all is gone
+</code></pre>
+
+<p>Please check the <a href="http://vagrantup.com/v1/docs/index.html">Vagrant documentation</a> for more information on Vagrant.</p>
+      </section>
+
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    
+  </body>
+</html>
