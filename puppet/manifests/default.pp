@@ -121,6 +121,16 @@ package { 'nodejs':
   ensure => installed
 }
 
+# ImageMagick runtime.
+package { ['imagemagick', 'libgraphicsmagick1-dev', 'libgraphicsmagick3']:
+  ensure => installed
+}
+
+# Redis Server.
+package { 'redis-server':
+  ensure => installed
+}
+
 # --- Ruby ---------------------------------------------------------------------
 
 exec { 'install_rvm':

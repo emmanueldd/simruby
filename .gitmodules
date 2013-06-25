@@ -1,18 +1,9 @@
-[submodule "day1"]
-	path = day1
-	url = git@github.com:elthariel/simruby-day1.git
-[submodule "day2"]
-	path = day2
-	url = git@github.com:elthariel/simruby-day2.git
-[submodule "day3"]
-	path = day3
-	url = git@github.com:elthariel/simruby-day3.git
-[submodule "day4"]
-	path = day4
-	url = git@github.com:elthariel/simruby-day4.git
-[submodule "day5"]
-	path = day5
-	url = git@github.com:elthariel/simruby-day5.git
+[submodule "ruby"]
+	path = ruby
+	url = git@github.com:elthariel/simruby-ruby.git
+[submodule "rails"]
+	path = rails
+	url = git@github.com:elthariel/simruby-rails.git
 [submodule "slides"]
 	path = slides
 	url = git@github.com:elthariel/simruby-slides.git
