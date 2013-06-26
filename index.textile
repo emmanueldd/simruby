@@ -1,0 +1,34 @@
+---
+layout: default
+title: "Presentation de la semaine Ruby/Rails"
+---
+
+h1. Introduction
+
+h2. SimRuby?
+
+Tu es sur la page de présentation de la Semaine IMmersive Ruby et Ruby on Rails de Sup'Internet. Si tu n'es pas étudiant en 2e année à "Sup'Internet"://www.supinternet.fr, tu peux toujours utiliser les éléments fournis ici pour démarrer ton apprentissage de Ruby et de Rails en utilisant le mécanisme de correction automatique fourni.
+
+h2. SimRuby!
+
+Cette page présente (rapidement) le déroulement de la semaine immersive, ainsi que la mise en place de l'environnement de travail, donne(ra) quelques précisions sur les exercices et fournit des pistes vers la (tonne de) documentation que tu devrais explorer durant la semaine.
+
+h1. La semaine
+
+h2. Objectifs
+
+Durant ces 5 jours, nous allons aborder dans un premier temps les bases du langage Ruby, sans rentrer dans des tonnes de meta-programmation, puis nous allons enchainer pendant 4 jours sur l'excellent framework Rails. Il n'est hélàs pas possible de devenir un expert de rails en 4 jours, mais nous allons essayer de te transmettre suffisament de compétences pour te donner l'envie et les moyens de continuer par toi même.
+
+Autre note importante, la semaine a été concue autour du TDD ("Test Driven Development":http://en.wikipedia.org/wiki/Test-driven_development), pratique très utilisée dans le développement Web en général, et particulièrement en Ruby. Nous n'allons pas vous donner d'exercices à proprement parler, mais une application de référence et surtout des tests unitaires/d'intégration qui testent l'implémentation de toutes les fonctionnalités désirées. Ces tests servent à la fois de sujet d'exercice et de mécanisme de correction (i.e. trollinette illimitée ;)
+
+h2. Notation
+
+Lors du dernier jour de la semaine, nous exécuterons les tests sur chacune de vos implémentations et le fichier de sortie du programme "RSpec":www.rspec.org sera la base de votre évaluation, les bonus seront ajoutés manuellement dans un deuxième temps.
+
+h2. Interactivité
+
+En plus des tests unitaires, de l'environnement de développement et des slides fournis, nous aimerions intégrer à la semaine immersive un peu plus d'intéractivité. Bien évidemment, nous serons à votre disposition tout la semaine (et même après) pour répondre à vos questions et vous aider à avancer. Bien évidemment, des cours et des démonstration ponctueront la semaine mais nous souhaiterions vous fournir l'opportunité de *proposer des bonus*, d' *améliorer la suite de test* fournie et d'intervenir dans la pédagogie en proposant des *petits talks* autour du sujet de la semain (tips & tricks, gems, documentation). Il va sans dire que chacune de ces options, exercées de manière constructive donnera lieu a des *bonus* sur la note de la semaine. Il ne sera pas possible d'avoir une *très bonne note* sans bonus/talk/amélioration.
+
+L'outil principal de cette interactivité sera GitHub, au travers du système d'issues et de pull request, comme les vrais rubyistes :) Je compte sur vous pour envoyer du poneyyy !
+
+
