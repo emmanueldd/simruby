@@ -17,6 +17,8 @@ h1. La semaine
 
 h2. Objectifs
 
+L'objectif de la semaine immersive est de développer une application très fortement inspirée par Twitter, nommée 'Gazooyr'. Sans fournir toutes les features de twitter, vous devriez arriver à la fin à un projet fonctionnel et utilisable.
+
 Durant ces 5 jours, nous allons aborder dans un premier temps les bases du langage Ruby, sans rentrer dans des tonnes de meta-programmation, puis nous allons enchainer pendant 4 jours sur l'excellent framework Rails. Il n'est hélàs pas possible de devenir un expert de rails en 4 jours, mais nous allons essayer de te transmettre suffisament de compétences pour te donner l'envie et les moyens de continuer par toi même.
 
 Autre note importante, la semaine a été concue autour du TDD ("Test Driven Development":http://en.wikipedia.org/wiki/Test-driven_development), pratique très utilisée dans le développement Web en général, et particulièrement en Ruby. Nous n'allons pas vous donner d'exercices à proprement parler, mais une application de référence et surtout des tests unitaires/d'intégration qui testent l'implémentation de toutes les fonctionnalités désirées. Ces tests servent à la fois de sujet d'exercice et de mécanisme de correction (i.e. trollinette illimitée ;)
@@ -31,4 +33,105 @@ En plus des tests unitaires, de l'environnement de développement et des slides 
 
 L'outil principal de cette interactivité sera GitHub, au travers du système d'issues et de pull request, comme les vrais rubyistes :) Je compte sur vous pour envoyer du poneyyy !
 
+h2. Le contenu
 
+Comme évoqué plus haut, nous mettons à disposition un environnement de développement, des tests unitaires pour la journée sur Ruby, d'autre pour Rails et les slides du cours (même s'ils sont probablement inutiles par eux-même). Vous pouvez les trouver en lien tout en haut de la page, les voici à nouveau néanmoins :
+
+* "Environnement de developpement":https://github.com/elthariel/simruby. Ce repository contient des liens vers les suivants
+* "Slides":https://github.com/elthariel/simruby-slides
+* "Tests unitaires Ruby":https://github.com/elthariel/simruby-ruby
+* "Tests unitaires Rails":https://github.com/elthariel/simruby-rails
+
+h1. Mise en route
+
+h2. Dépendances
+
+Pour pouvoir réaliser cette semaine immersive, les éléments suivants sont nécessaires :
+
+* Un client git.
+** Ubuntu/Debian: @apt-get install git-core@
+** "Windows":http://windows.github.com/.
+** OSX, Installation avec "Homebrew":http://mxcl.github.io/homebrew/: @brew install git@
+* Oracle "VirtualBox":https://www.virtualbox.org/
+* "Vagrant":http://www.vagrantup.com/
+* Un editeur adapté au Ruby et aux technos que l'on va empployer
+** "Emacs":http://www.gnu.org/software/emacs/
+** "Vim":http://www.vim.org/
+** SublimeText
+** TextMate
+* Le repository fournit pour simruby
+
+h2. Déploiement
+
+Nous allons maintenant installer les dépendances, récupérer le code
+partagé et déployer l'environnement de développement:
+
+h3. Résumé
+
+* Installer git
+* Installer VirtualBox
+* Installer Vagrant
+* Installer un editeur de texte respectable (oubliez les IDEs ou Notepad++)
+* Cloner le repository (dossier de code partagé et versionné)
+** @git clone https://github.com/elthariel/simruby.git@
+* Mettre a jour les repositories liés.
+** @git submodule update --init@
+* Je suppose qu'il y a une méthode cliquouillante pour faire ca sous Windows
+* Déployer l'environnement de développement
+** @cd /path/to/cloned/simruby@
+** @vagrant up@
+* Se connecter à la vagrant box de dev
+** @vagrant ssh@
+
+h3. Documentation détaillée
+
+Des documentations plus détaillées sont disponibles sur les différents repos impliqués, en particulier sur le "repo principal":https://github.com/elthariel/simruby
+
+h1. Interaction
+
+GitHub, qui héberge le code de ces projets, dispose de 2 outils particulièrement utilisés dans la communauté et que nous allons utiliser durant cette semaine pour vous fournir du support et pour recevoir vos contributios :
+* Un système de ticket: 'Issue'
+* Un outil pour dupliquer un repo, le modifier et proposer les modification au repository initial: les Pull Request
+
+Voici les instructions et la documentation de ces outils:
+
+h2. Support
+
+Si vous rencontrez un problème que vous pensez être un bug venant de notre côté (c'est _notre_ faute), ou si vous pensez que des éléments mériterait des précisions, vous pouvez ouvrir un ticket sur GitHub (une issue) pour nous en faire part. Le processus est le suivant :
+
+* Vérifiez que la question n'a pas déjà été posée par un autre étudiant en utilisant la recherche et en regardant le titre des tickets existants (vérfiez les tickets close)
+* Si vous ne trouvez pas votre problème dans un autre ticket, vous pouvez en créer un nouveau en cliquant sur 'New Issue'. Merci de rédiger si possible, votre ticket en anglais, sinon ajoutez le tag 'fr'
+* Donnez le maximum d'information relative à votre sujet
+** Utilisez vous la VM fournie ?
+** Que faisiez vous quand c'est arrivé
+** Avez vous une trace d'erreur à fournir (le gros message qui fait peur)
+* Ajoutez les tags pertinents
+
+h2. Contribution
+
+Si vous voulez avoir une *très bonne* note, il va falloir, d'une facon ou d'une autre, contribuer à SimRuby. Ces contributions peuvent prendre plusieurs formes:
+
+* Lightning talks: Presentation en 5mn d'un tip, d'une feature ou d'une gem.
+* Proposition de correction ou d'amélioration des tests unitaires.
+* Ajout de bonus à votre projet (ajout de features non requises/prévues par les specs).
+* Propositions de specs (tests unitaires) pour vos bonus.
+* Réponse pertinente à des tickets créés par d'autres étudiants.
+* Triage: Mise en relation de tickets identiques ou liés, assignation des bons tags.
+
+Les contributions de code se font via des Pull Request :
+* "Using Pull Requests":https://help.github.com/articles/using-pull-requests
+* "Creating Pull Requests":https://help.github.com/articles/creating-a-pull-request
+* "Pull Request most extensive documentation ever":http://bit.ly/19ErqPN
+
+Les tests unitaires utilisent :
+* "RSpec":http://rspec.info
+* "Capybara":https://github.com/jnicklas/capybara
+* "Petit résumé":https://gist.github.com/them0nk/2166525
+
+
+h1. Documentation Ruby/Rails
+
+* "Ruby":http://www.ruby-lang.org/en/documentation/
+* "Rails":http://rubyonrails.org/documentation
+* "StackOverflow":http://stackoverflow.com/
+* Les indispensables "RailsCasts":http://railscasts.com/
