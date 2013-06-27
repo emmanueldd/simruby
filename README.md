@@ -70,9 +70,11 @@ commandes au lieu d'une seule :
 
 ### Jour 1
 
-    vagrant@simruby-devbox:~$ cd /vagrant/day1
-    vagrant@simruby-devbox:/vagrant/day1$ rspec
+    vagrant@simruby-devbox:~$ cd /vagrant/ruby
+    [Bosser]
+    vagrant@simruby-devbox:/vagrant/ruby$ rspec
     [...]
+    [ Fail or Win ]
 
 ## What's In The Box
 
@@ -84,7 +86,7 @@ commandes au lieu d'une seule :
 
 * Bundler
 
-* SQLite3, MySQL, and Postgres
+* SQLite3, MySQL, Postgres and Redis
 
 * System dependencies for nokogiri, sqlite3, mysql, mysql2, and pg
 
