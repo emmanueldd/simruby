@@ -50,7 +50,7 @@ vous pouvez y acceder en vous rendant dans le repertoire /vagrant
 
     vagrant@simruby-devbox:~$ cd /vagrant
     vagrant@simruby-devbox:/vagrant$ ls
-    day1  day2  day3  day4  day5  puppet  README.md  slides  Vagrantfile
+    ruby  rails  puppet  README.md  slides  Vagrantfile
 
 Le port 3000 (le port par defaut de rails) de l'hote est forwarde
 (transfere) au port 3000 de la machine virtuelle. De cette maniere,
