@@ -7,3 +7,6 @@
 [submodule "rails"]
 	path = rails
 	url = https://github.com/elthariel/simruby-rails.git
+[submodule "app"]
+	path = app
+	url = https://github.com/elthariel/simruby-app.git
