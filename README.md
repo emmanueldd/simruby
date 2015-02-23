@@ -52,7 +52,7 @@ vous pouvez y acceder en vous rendant dans le repertoire /vagrant
     vagrant@simruby-devbox:/vagrant$ ls
     ruby  rails  puppet  README.md  slides  Vagrantfile
 
-Le port 3000 (le port par defaut de rails) de l'hote est forwarde
+Le port 3000 (le port par defaut de rails) de l'hote est forward
 (transfere) au port 3000 de la machine virtuelle. De cette maniere,
 les applis rails de la machine virtuelles sont disponibles a cette
 adresse sur l'hote: http://localhost:3000
