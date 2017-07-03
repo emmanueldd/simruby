@@ -24,7 +24,7 @@ Note: Thank to the rails team for providing the original vagrant box.
 
 Building the virtual machine is this easy:
 
-    host $ git clone https://github.com/elthariel/simruby.git
+    host $ git clone https://github.com/emmanueldd/simruby.git
     host $ cd simruby
     host $ git submodule init
     host $ vagrant up
